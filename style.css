@@ -11,11 +11,11 @@
 body {
     display: flex;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 30px);
     justify-content: center;
     align-items: center;
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, rgba(242,242,255,1) 0%, rgba(254,227,247,1) 90%);
+    background: linear-gradient(135deg, rgba(242,242,255,1) 0%, rgb(254, 227, 247) 90%);
     color: #2A325E;
 }
 
@@ -190,11 +190,39 @@ input[type="text"] {
     margin-left: 5px;
 }
 
+/* *********** DATAS *********** */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+    width: 100%;
+    background-color: #000;
+    color: #fee3f7;
+}
+
+footer p {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fee3f7;
+    transition: all 0.3s ease-in-out;
+}
+
+footer a:hover  {
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
 /* *********** MEDIA QUERIES *********** */
 
 @media screen and (max-width: 992px)  {
     h1 {
         font-size: 2.25rem;
+        /* margin-bottom: 4rem; */
     }
 
     form label {
@@ -235,6 +263,7 @@ input[type="text"] {
     h1 {
         font-size: 1.35rem;
         align-self: center;
+        /* margin-bottom: 2.5rem; */
     }
 
     form label {
