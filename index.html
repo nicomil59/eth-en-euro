@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convertisseur de l'Ethereum en Euro et de l'Euro en Ethereum, prix de l'ETH et variation.">
+    <link rel="shortcut icon" href="./img/ethereum.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script defer src="./script.js"></script>
+    <title>ETH en Euro</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Conversion Ethereum / Euro</h1>
+        <div class="forms">
+            <form>
+                <label for="eth">ETH</label>
+                <input type="text" name="eth" id="eth" value="1.0000">
+            </form>
+            <form>
+                <label for="eur">EUR</label>
+                <input type="text" name="eur" id="eur">
+            </form>
+        </div>
+        <div class="data-blocs">
+            <div class="range bloc">
+                <label for="range">Valeur entre 0 et 1 ETH</label>
+                <div class="range-data">
+                    <input type="range" name="range" id="range" min="0" max="1" step="0.01" value="1">
+                    <p class="eth-value">1.00 <span>ETH</span></p>
+                </div>
+            </div>
+            <div class="price-eth bloc">
+                <p class="price-eth-text">Prix de l'Ethereum (ETH)</p>
+                <div class="price-eth-data">
+                    <span class="price-eth-current"></span>
+                    <span class="price-eth-var"></span>
+                </div>
+                <p class="price-eth-24h-value">Variation / 24h</p>
+            </div>
+            <div class="price-variation bloc">
+                <div class="left">
+                    <p>7 jours</p>
+                    <p>30 jours</p>
+                    <p>200 jours</p>
+                </div>
+                <div class="right">
+                    <p class="price-oneweek"><span></span></p>
+                    <p class="price-onemonth"><span></span></p>
+                    <p class="price-200days"><span></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

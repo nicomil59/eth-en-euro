@@ -1,0 +1,275 @@
+/* *********** GENERAL *********** */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, rgba(242,242,255,1) 0%, rgba(254,227,247,1) 90%);
+    color: #2A325E;
+}
+
+.container {
+    width: 80%;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 6rem;
+    align-self: start;
+}
+
+/* *********** FORMULAIRES *********** */
+
+.forms {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+form {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+form:first-child {
+    flex-direction: row;
+}
+
+form:last-child {
+    flex-direction: row-reverse;
+}
+
+form label {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+input[type="text"] {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    width: 75%;
+    border-radius: 15px;
+    /* border: 1px solid #808080; */
+    border: 10px solid #fff;
+    background-color: #F6E9F9;
+    color: #777;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 15%);
+}
+
+/* *********** DATAS *********** */
+
+.data-blocs {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.bloc {
+    background-color: #F6E9F9;
+    border: 8px solid #fff;
+    border-radius: 15px;
+    padding: 16px;
+}
+
+/* **** Curseur **** */
+
+.range {
+    width: 400px;
+}
+
+.range-data {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.range input {
+    width: 70%;
+}
+
+.range .eth-value {
+    font-size: 1.5rem;
+}
+
+.eth-value span {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* **** Prix de l'ETH **** */
+
+.price-eth {
+    width: 300px;
+}
+
+.price-eth-data {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.price-eth-text {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.price-eth-current {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.price-eth-var {
+    background-color: green;
+    font-size: 0.9rem;
+    color: #fff;
+    padding: 4px 6px;
+    border-radius: 3px;
+}
+
+.price-eth p:last-child {
+    font-size: 0.7rem;
+    color: #777;
+    text-align: right;
+    margin-top: 2px;
+}
+
+/* **** Variation de l'ETH **** */
+
+.price-variation {
+    width: 250px;
+    font-size: 0.8rem;
+    color: #777;
+
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.price-variation .left {
+    text-align: right;
+}
+
+.price-variation > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+}
+
+.price-variation .right p {
+    font-weight: 500;
+    color: #2A325E;
+}
+
+.price-variation .right span {
+    font-size: 0.7rem;
+    color: red;
+    margin-left: 5px;
+}
+
+/* *********** MEDIA QUERIES *********** */
+
+@media screen and (max-width: 992px)  {
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    form label {
+        font-size: 1.5rem;
+    }
+
+    input[type="text"] {
+        font-size: 1.5rem;
+        padding: 0.75rem 0.5rem;
+    }
+
+    .range, .price-eth, .price-variation {
+        width: 100%;
+    }
+
+    .range input {
+        width: 60%;
+    }
+
+    .range .eth-value {
+        font-size: 1.25rem;
+    }
+    
+    .eth-value span {
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 568px)  {
+    body {
+        align-items:flex-start;
+    }
+    
+    .container {
+        width: 90%;
+        margin-top: 3rem;
+    }
+    
+    h1 {
+        font-size: 1.35rem;
+        align-self: center;
+    }
+
+    form label {
+        font-size: 1rem;
+    }
+    
+    .forms {
+        flex-direction: column;
+    }
+
+    form:last-child {
+        flex-direction: row;
+    }
+
+    .range {
+        padding: 8px 16px;
+    }
+
+    .range label {
+        font-size: 0.9rem;
+        display: none;
+    }
+
+    .range-data {
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    .range input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .price-eth-var {
+        font-size: 0.8rem;
+        padding: 4px
+    }
+}
