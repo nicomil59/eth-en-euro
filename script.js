@@ -71,6 +71,9 @@ const getCurrencies = async () => {
                 if (currency === 'eth') {
                     inputRange.value = inputValue;
                     let valueInEUR = convertETHToEUR(ethRateInEUR, inputValue);
+                    if(isNaN(valueInEUR)) {
+                        valueInEUR = 0;
+                    }
                     if (valueInEUR >= 10000) {
                         valueInEUR = parseInt(valueInEUR);
                     }
@@ -78,6 +81,9 @@ const getCurrencies = async () => {
                     
                 } else {
                     let valueInETH = convertEURToETH(ethRateInEUR, inputValue);
+                    if(isNaN(valueInETH)) {
+                        valueInETH = 0;
+                    }
                     if (valueInETH >= 10000) {
                         valueInETH = parseInt(valueInETH);
                     }
